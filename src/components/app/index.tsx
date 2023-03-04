@@ -9,7 +9,6 @@ import { useToggle } from "react-use";
 
 import routes from "../../pages";
 
-
 type AppProps = {
   burger: { opened: boolean; toggle: VoidFunction };
 };

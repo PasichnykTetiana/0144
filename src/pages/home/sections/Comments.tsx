@@ -44,7 +44,10 @@ const Comments: FC<{ arr: FormValues[] }> = ({ arr }) => {
       {(flag ? arr.slice(-3) : arr).map((it, index) => (
         <Col key={flag ? arr.length + index : index} span={24}>
           <div className={"content"}>
-            <Typography.Title level={1}>{it.name}<time>{it.date}</time></Typography.Title>
+            <Typography.Title level={1}>
+              {it.name}
+              <time>{it.date}</time>
+            </Typography.Title>
             <Typography.Paragraph>{it.comment}</Typography.Paragraph>
             <div className={"triangle-border"}></div>
             <div className={"triangle"}></div>
