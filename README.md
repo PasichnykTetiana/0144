@@ -1,0 +1,1 @@
+This application leverages the React with TypeScript framework. In addition, it incorporates Ant Design, a popular UI library that provides a set of polished and customizable components. The Less preprocessor was also used to streamline the CSS styling. The application was built using the Vite bundler.

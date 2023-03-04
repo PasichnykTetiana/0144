@@ -1,0 +1,120 @@
+@import "src/components/app/index";
+
+#root {
+  .comments {
+    margin-top: 10px;
+    margin-left: 3px;
+
+    .button-block {
+      display: flex;
+
+      h1 {
+        margin: 0 8px 0 0;
+      }
+
+      .active {
+        color: #005da1;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: underline;
+        animation: ani 0.5s forwards;
+      }
+    }
+
+    .icon-block,
+    .button-block {
+      line-height: 100%;
+      margin-bottom: 13px;
+    }
+
+    .icon-block {
+      display: flex;
+      margin: 0 -9px;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        margin: 0 9px;
+
+        &.ant-typography {
+          font-size: 12px;
+        }
+
+        svg {
+          margin-right: 4px;
+        }
+
+        div {
+          margin: 0;
+        }
+      }
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      animation: animation 1.5s forwards;
+      @keyframes animation {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      h1 {
+        margin-bottom: 9px;
+        time {
+          font-weight: 400;
+          font-size: 11px;
+          color: @color-gray;
+          margin-left: 8px;
+        }
+      }
+
+      div.ant-typography,
+      h1 {
+        position: relative;
+        z-index: 2;
+      }
+
+      div.ant-typography {
+        position: relative;
+        z-index: 1;
+        background-color: @color-aqua;
+        padding: 22px 17px 11px 20px;
+        box-shadow: 0 4px 10px 0 @color-shadow;
+        border: 1px solid @color-border;
+      }
+
+      .triangle {
+        position: absolute;
+        z-index: 2;
+        top: 22px;
+        left: 23px;
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid @color-aqua;
+        border-right: 8px solid transparent;
+      }
+
+      .triangle-border {
+        position: absolute;
+        top: 20px;
+        left: 22px;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid @color-border;
+        border-right: 10px solid transparent;
+        filter: drop-shadow(0 8px 10px @color-shadow);
+      }
+    }
+  }
+}

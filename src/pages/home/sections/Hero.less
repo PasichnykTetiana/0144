@@ -1,0 +1,137 @@
+@import "src/components/app/index";
+
+#root {
+  .hero {
+    .container {
+      display: flex;
+      line-height: 20px;
+      margin: 0 -5px;
+      & > div {
+        flex: 1 1 auto;
+        margin: 0 5px;
+      }
+      .img-container {
+        max-width: 124px;
+        max-height: 124px;
+      }
+      img {
+        position: relative;
+        width: 124px;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      .name {
+        margin-top: 7px;
+        margin-bottom: 2px;
+        @media (max-width: 440px) {
+          margin-top: 0;
+        }
+      }
+      .subtitle {
+        color: @color-gray;
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+      div.ant-typography:nth-of-type(2) {
+        position: relative;
+        padding: 6px 0 8px 0;
+        span {
+          position: relative;
+          display: block;
+          z-index: 2;
+          max-width: 250px;
+        }
+        .background {
+          position: absolute;
+          border-radius: 5px;
+          border: 1px solid @color-stroke-light-gray;
+          left: -72px;
+          top: 0;
+          height: 100%;
+          width: calc(100% + 62px + 19px + 1px);
+          z-index: 1;
+          background-color: #fffbc8;
+        }
+      }
+
+      .services {
+        .title {
+          margin-bottom: 8px;
+          text-align: end;
+        }
+        .ant-col-5 {
+          display: flex;
+          justify-content: center;
+        }
+        .ant-col-19 {
+          height: 24px;
+          display: flex;
+          align-items: center;
+        }
+        .diagram {
+          border-top: 1px solid @color-stroke-light-gray;
+          border-bottom: 1px solid @color-stroke-light-gray;
+          padding: 16px 0 15px 0;
+          & > :first-child {
+            border-left: 1px solid rgba(51, 51, 51, 0.2);
+          }
+          h1 {
+            width: 15.7px;
+            text-align: end;
+          }
+
+          div.ant-typography {
+            margin: 0;
+            position: relative;
+            z-index: 2;
+          }
+          .ant-row:not(:last-child) {
+            margin-bottom: 2px;
+          }
+          .ant-col {
+            position: relative;
+          }
+
+          .ant-row:nth-of-type(1) {
+            .line {
+              width: 95%;
+              max-width: 219px;
+            }
+          }
+          .ant-row:nth-of-type(2) {
+            .line {
+              width: 30%;
+              max-width: 54px;
+            }
+          }
+          .ant-row:nth-of-type(3) {
+            .line {
+              width: 18%;
+              max-width: 36px;
+            }
+          }
+          .line {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: -0.8px;
+            height: 100%;
+            border-radius: 0 3px 3px 0;
+          }
+        }
+
+        div,
+        h1 {
+          font-size: 13px;
+        }
+      }
+      .total {
+        margin-top: 9px;
+        .ant-col-5 {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

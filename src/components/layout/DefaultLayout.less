@@ -1,0 +1,38 @@
+@import "src/components/app/index";
+
+html {
+  body {
+    @media screen and (min-width: 720px) {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  }
+}
+
+#root {
+  width: 100%;
+  overflow: hidden;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    &.ant-typography {
+      font-weight: 700;
+      font-family: @headings-font-family;
+    }
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  div.ant-typography {
+    font-size: 16px;
+  }
+
+  .ant-spin-spinning {
+    margin: auto;
+  }
+}

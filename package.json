@@ -1,0 +1,47 @@
+{
+  "name": "0144",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "yarn vite serve",
+    "fix": " yarn prettier --write src && yarn lint:scripts . --fix src/**/*.{ts,tsx}",
+    "prettier": "node_modules/.bin/prettier",
+    "lint:scripts": "node_modules/.bin/eslint"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@emotion/react": "^11.10.5",
+    "antd": "^4.24.1",
+    "less": "^4.1.3",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.4.3",
+    "react-router-dom": "^6.4.3",
+    "react-use": "^17.4.0",
+    "vite-plugin-babel": "^1.1.2",
+    "vite-plugin-svgr": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.22",
+    "@types/react-animate-on-scroll": "^2.1.5",
+    "@types/react-dom": "^18.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "2.8.4",
+    "typescript": "*",
+    "vite": "^3.2.0"
+  }
+}
