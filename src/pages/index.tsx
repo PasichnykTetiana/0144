@@ -7,7 +7,7 @@ const NotFound = lazy<FC>(async () => await import("./not-found"));
 
 const routes: RouteObject[] = [
   {
-    path: "/",
+    path: "/0144/",
     element: <DefaultLayout />,
     children: [
       {

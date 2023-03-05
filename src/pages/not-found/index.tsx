@@ -7,7 +7,7 @@ const NotFound: FC = () => {
     <Result
       title={"Not Found"}
       extra={
-        <NavLink to={"/"}>
+        <NavLink to={"/0144"}>
           <Button key="console" shape="round" size={"large"}>
             HOME
           </Button>
