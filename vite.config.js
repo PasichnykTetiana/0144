@@ -29,5 +29,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/vite-deploy-demo/'
+  base: '/0144/'
 });
