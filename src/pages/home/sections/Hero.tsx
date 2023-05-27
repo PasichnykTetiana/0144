@@ -41,9 +41,8 @@ const Hero: FC<Text> = ({ title, subtitle, info }) => {
           <Typography.Paragraph className={"subtitle"}>
             {subtitle}
           </Typography.Paragraph>
-          <Typography.Paragraph>
+          <Typography.Paragraph className={'info'}>
             <span>{info}</span>
-            <div className={"background"}></div>
           </Typography.Paragraph>
           <div className={"services"}>
             <Row justify={"space-between"}>

@@ -32,25 +32,20 @@
         font-size: 12px;
         margin-bottom: 5px;
       }
-      div.ant-typography:nth-of-type(2) {
-        position: relative;
+      div.info {
+        display: flex;
         padding: 6px 0 8px 0;
+        background-color: #fffbc8;
+        border-radius: 5px;
+        border: 1px solid @color-stroke-light-gray;
+        width: calc(100% + 62px + 19px + 1px);
+        margin-left: -62px;
         span {
           position: relative;
           display: block;
           z-index: 2;
+          margin-left: 62px;
           max-width: 250px;
-        }
-        .background {
-          position: absolute;
-          border-radius: 5px;
-          border: 1px solid @color-stroke-light-gray;
-          left: -72px;
-          top: 0;
-          height: 100%;
-          width: calc(100% + 62px + 19px + 1px);
-          z-index: 1;
-          background-color: #fffbc8;
         }
       }
 
@@ -85,9 +80,11 @@
             position: relative;
             z-index: 2;
           }
+
           .ant-row:not(:last-child) {
             margin-bottom: 2px;
           }
+
           .ant-col {
             position: relative;
           }
@@ -98,18 +95,21 @@
               max-width: 219px;
             }
           }
+
           .ant-row:nth-of-type(2) {
             .line {
               width: 30%;
               max-width: 54px;
             }
           }
+
           .ant-row:nth-of-type(3) {
             .line {
               width: 18%;
               max-width: 36px;
             }
           }
+
           .line {
             position: absolute;
             z-index: 1;
@@ -125,8 +125,10 @@
           font-size: 13px;
         }
       }
+
       .total {
         margin-top: 9px;
+
         .ant-col-5 {
           display: flex;
           justify-content: center;
