@@ -1,6 +1,14 @@
 @import "src/components/app/index";
 
 #root {
+  .hero, .comments, .ant-form-item {
+    @media screen and (min-width: 720px) {
+      max-width: 720px;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
   .hero {
     .container {
       display: flex;
@@ -16,7 +24,7 @@
       }
       img {
         position: relative;
-        width: 124px;
+        width: 100%;
         border-radius: 50%;
         z-index: 2;
       }
@@ -38,7 +46,7 @@
         background-color: #fffbc8;
         border-radius: 5px;
         border: 1px solid @color-stroke-light-gray;
-        width: calc(100% + 62px + 6px);
+        width: calc(100% + 62px + 38px + 1px);
         margin-left: -62px;
         span {
           position: relative;
@@ -58,7 +66,7 @@
           display: flex;
           justify-content: center;
         }
-        .ant-col-19 {
+        .diagram-content {
           height: 24px;
           display: flex;
           align-items: center;
