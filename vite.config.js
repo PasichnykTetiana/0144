@@ -29,5 +29,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/0144/'
+  base: "/0144/",
 });

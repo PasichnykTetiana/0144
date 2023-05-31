@@ -2,7 +2,7 @@ import "./Hero.less";
 import img from "./img/img.png";
 import { Col, Row, Typography } from "antd";
 import { type FC } from "react";
-
+import { useBreakpoints } from "../../../components/screen";
 type Text = {
   title: string;
   subtitle: string;
@@ -10,6 +10,8 @@ type Text = {
 };
 
 const Hero: FC<Text> = ({ title, subtitle, info }) => {
+  const { isMD } = useBreakpoints();
+
   const data = [
     {
       text: "Manual tour booking",
@@ -33,19 +35,19 @@ const Hero: FC<Text> = ({ title, subtitle, info }) => {
       <Col className={"container"} span={24}>
         <div>
           <Row>
-            <Col span={5}>
+             <Col span={isMD? 9 :6}>
               <div className={"img-container"}>
                 <img src={img} alt={"avatar"} />
               </div>
             </Col>
-            <Col span={18}>
+            <Col span={isMD ? 15 : 18}>
               <Typography.Title className={"name"} level={1}>
                 {title}
               </Typography.Title>
               <Typography.Paragraph className={"subtitle"}>
                 {subtitle}
               </Typography.Paragraph>
-              <Typography.Paragraph className={'info'}>
+              <Typography.Paragraph className={"info"}>
                 <span>{info}</span>
               </Typography.Paragraph>
             </Col>
@@ -60,37 +62,34 @@ const Hero: FC<Text> = ({ title, subtitle, info }) => {
               </Col>
             </Row>
             <Row>
-
-              <Col span={5}>
-
-              </Col>
-              <Col span={19}>
+              <Col span={6}></Col>
+              <Col span={18}>
                 <div className={"diagram"}>
                   <div>
-                    {data.map((it: any, index: any) => {
+                    {data.map((it, index) => {
                       return (
-                          <Row key={index} justify={"space-between"}>
-                            <Col className={'diagram-content'} span={19}>
-                              <Typography.Paragraph>{it.text}</Typography.Paragraph>
-                              <div
-                                  style={{ backgroundColor: it.color }}
-                                  className={"line"}
-                              ></div>
-                            </Col>
-                            <Col span={5}>
-                              <Typography.Title level={1}>
-                                {it.number}
-                              </Typography.Title>
-                            </Col>
-                          </Row>
+                        <Row key={index} justify={"space-between"}>
+                          <Col className={"diagram-content"} span={19}>
+                            <Typography.Paragraph>
+                              {it.text}
+                            </Typography.Paragraph>
+                            <div
+                              style={{ backgroundColor: it.color }}
+                              className={"line"}
+                            ></div>
+                          </Col>
+                          <Col span={5}>
+                            <Typography.Title level={1}>
+                              {it.number}
+                            </Typography.Title>
+                          </Col>
+                        </Row>
                       );
                     })}
                   </div>
                 </div>
               </Col>
             </Row>
-
-
           </div>
           <Row className={"total"}>
             <Col span={19}>
