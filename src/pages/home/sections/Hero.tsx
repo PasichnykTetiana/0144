@@ -35,7 +35,7 @@ const Hero: FC<Text> = ({ title, subtitle, info }) => {
       <Col className={"container"} span={24}>
         <div>
           <Row>
-             <Col span={isMD? 9 :6}>
+            <Col span={isMD ? 9 : 6}>
               <div className={"img-container"}>
                 <img src={img} alt={"avatar"} />
               </div>
