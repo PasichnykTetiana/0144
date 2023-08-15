@@ -50,11 +50,32 @@
         border: 1px solid @color-stroke-light-gray;
         width: calc(100% + 62px + 29px + 1px);
         margin-left: -81px;
+        @media (min-width: @screen-sm) and (max-width: @screen-md) {
+          width: calc(100% + 62px + 29px + 1px + 84px);
+          margin-left: -165px;
+        }
+        @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+          width: calc(100% + 62px + 29px + 1px + 89px);
+          margin-left: -170px;
+        }
+        @media only screen and (max-width: @screen-xs) {
+          width: calc(100% + 31px + 29px + 1px);
+          margin-left: -50px;
+        }
         span {
           position: relative;
           display: block;
           z-index: 2;
           margin-left: 81px;
+          @media (min-width: @screen-sm) and (max-width: @screen-md) {
+            margin-left: 165px;
+          }
+          @media (min-width: @screen-xs) and (max-width: @screen-sm) {
+            margin-left: 170px;
+          }
+          @media only screen and (max-width: @screen-xs) {
+            margin-left: 50px;
+          }
           max-width: 250px;
         }
       }
